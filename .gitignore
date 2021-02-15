@@ -4,3 +4,5 @@
 .env
 /config
 devices.json
+.idea/
+.DS_Store
