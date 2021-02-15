@@ -114,7 +114,7 @@ app.get('/find', async (req, res) => {
  */
 app.get('/:id/logs', CheckDeviceIsWithUser, async (req, res) => {
   try {
-    const { params, cookies } = req;
+    const { params } = req;
     const { id } = params;
     const logs = await factory.logs(id);
     // bada-bing bada-boom
@@ -185,7 +185,7 @@ app.post('/:id/checkout', async (req, res) => {
  */
 app.post('/:id/start', CheckDeviceIsWithUser, async (req, res) => {
   try {
-    const { query, params, cookies } = req;
+    const { query, params } = req;
     const paramsString = _.get(query, 'params', undefined) as string | undefined;
     const { id } = params;
     const result = await factory.start(id, paramsString);
@@ -203,7 +203,7 @@ app.post('/:id/start', CheckDeviceIsWithUser, async (req, res) => {
  */
 app.post('/:id/stop', CheckDeviceIsWithUser, async (req, res) => {
   try {
-    const { params, cookies } = req;
+    const { params } = req;
     const { id } = params;
     const result = await factory.stop(id);
 

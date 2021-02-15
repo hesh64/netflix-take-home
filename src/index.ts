@@ -8,5 +8,5 @@ import { app } from './app/controller';
 
 // IT'S OVER 9000!! --> Please lookup the meme in case you are wondering haha
 app.listen(config.get('http.port'), () => {
-  console.log("It's lit!");
+  console.log('It\'s lit!');
 });
